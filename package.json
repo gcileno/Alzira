@@ -1,0 +1,21 @@
+{
+  "name": "alzira",
+  "version": "1.0.0",
+  "description": "sudo cp -r node-v20.9.0-linux-x64 /usr/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "bulma": "^0.9.4",
+    "next": "^14.0.3",
+    "sass": "^1.69.5"
+  }
+}
