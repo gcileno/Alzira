@@ -9,11 +9,14 @@ export const CartaDia = () => {
 
   const embaralharCartas = () => {
     setMostrarSequencia(true);
+    setCartaSelecionada(null); // Reset selected card when shuffling
   };
 
   const handleClickCarta = (numeroAleatorio) => {
+    const cartaNome = arcanosMaiores[numeroAleatorio - 1];
     setCartaSelecionada(numeroAleatorio);
-    // Lógica adicional ao clicar em uma carta, se necessário
+    alert(`A carta selecionada é: ${cartaNome}`);
+    // You can replace the alert with your preferred notification component or method
   };
 
 
@@ -46,7 +49,7 @@ export const CartaDia = () => {
           </div>
           {mostrarSequencia && (
             <div className="columns is-multiline mt-4">
-              <SortearCartas />
+              <SortearCartas onCartaClick={handleClickCarta} cartaSelecionada={cartaSelecionada} />
             </div>
           )}
         </div>

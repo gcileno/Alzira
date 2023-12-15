@@ -81,7 +81,6 @@ export default function Portal() {
                             <a>
                                 <h2 className="subtitle" style={{ color: '#333' }}>Pesquisar Cartas</h2>
                             </a>
-                            {/* Conteúdo relacionado à "Pesquisar Cartas" */}
                         </div>
                     </div>
                 </div>
