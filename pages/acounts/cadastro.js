@@ -87,4 +87,45 @@ export default UserForm;
 
 
 
+// Adicione esta função ao seu código existente
 
+async function NewUser(userData) {
+    try {
+      // Verifica se todos os campos necessários estão presentes
+      if (!userData.user || !userData.password || !userData.birthdate) {
+        throw new Error('Todos os campos são obrigatórios.');
+      }
+  
+      // Insira o novo usuário na tabela 'Usuario'
+      const result = await query(`
+        INSERT INTO Usuario (username, senha, data_nascimento)
+        VALUES (?, ?, ?)
+      `, [userData.user, userData.password, userData.birthdate]);
+  
+      // Verifica se a inserção foi bem-sucedida
+      if (result.affectedRows > 0) {
+        console.log('Novo usuário cadastrado com sucesso!');
+      } else {
+        throw new Error('Erro ao cadastrar usuário.');
+      }
+    } catch (error) {
+      console.error('Erro ao cadastrar usuário:', error.message);
+      throw error; // Rejeita a Promise para que o componente React possa lidar com o erro
+    }
+  }
+  
+  // Modifique a função handleSubmit em seu componente UserForm.js para chamar NewUser
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      await NewUser(userData);
+      console.log('Dados do usuário enviados para cadastro:', userData);
+      // Adicione qualquer lógica adicional aqui, como redirecionamento após o cadastro bem-sucedido
+    } catch (error) {
+      // Trate o erro, por exemplo, exibindo uma mensagem de erro no seu formulário
+      console.error('Erro durante o cadastro do usuário:', error.message);
+    }
+  };
+  

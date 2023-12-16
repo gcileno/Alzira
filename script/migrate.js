@@ -44,7 +44,18 @@ async function createTables() {
           id INT AUTO_INCREMENT PRIMARY KEY,
           username VARCHAR(50) NOT NULL,
           senha VARCHAR(255) NOT NULL,
-          data_nascimento DATE,
+          data_nascimento DATE
+        );
+      `);
+
+    // Tabela Carta
+    await query(`
+        CREATE TABLE Carta (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          nome VARCHAR(50) NOT NULL,
+          arcano VARCHAR(20),
+          significado TEXT,
+          imagem_url VARCHAR(250)
         );
       `);
 
@@ -71,17 +82,6 @@ async function createTables() {
         );
       `);
 
-    // Tabela Carta
-    await query(`
-        CREATE TABLE Carta (
-          id INT AUTO_INCREMENT PRIMARY KEY,
-          nome VARCHAR(50) NOT NULL,
-          arcano VARCHAR(20),
-          significado TEXT,
-          imagem_url VARCHAR(250)
-        );
-      `);
-
     console.log('Tables created successfully');
   } catch (error) {
     console.error('Could not run createTables:', error);
@@ -89,14 +89,14 @@ async function createTables() {
   }
 }
 
-async function NewUser(){
+async function NewUser() {
 
 }
 
 async function migrate() {
 
   try {
-    
+
     await createTables()
     console.log('migration ran successfully')
 

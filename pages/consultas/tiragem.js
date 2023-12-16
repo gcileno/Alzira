@@ -1,6 +1,6 @@
 import 'bulma/css/bulma.min.css';
 import { SortearCartas } from '../components/sortcard.js';
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export const Tiragem = () => {
     const [mostrarSequencia, setMostrarSequencia] = useState(false);
@@ -37,15 +37,13 @@ export const Tiragem = () => {
                         </div>
                     </div>
                     {mostrarSequencia && (
-                        <SortearCartas />
+                        <SortearCartas/>
                     )}
                 </div>
             </div>
         </div>
     );
 };
-
-
 
 
 
