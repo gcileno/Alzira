@@ -3,7 +3,7 @@ import 'bulma/css/bulma.min.css';
 import React from 'react';
 
 
-export function SortearCartas({ onCartaClick, cartaSelecionada }) {
+const SortearCartas = ({ onCartaClick, cartaSelecionada })=> {
   const cartas = Array.from({ length: 5 }, (_, index) => {
     
     const numeroAleatorio = Math.floor(Math.random() * 22) + 1;
@@ -31,3 +31,5 @@ export function SortearCartas({ onCartaClick, cartaSelecionada }) {
     </div>
   );
 }
+
+export default SortearCartas;

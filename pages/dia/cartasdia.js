@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.min.css';
-import { SortearCartas } from '../components/sortcard.js';
+import SortearCartas from '../components/sortcard';
 import React, { useState } from "react";
 
 const CartaDia = () => {
