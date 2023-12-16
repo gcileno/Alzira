@@ -2,7 +2,7 @@ import 'bulma/css/bulma.min.css';
 import { SortearCartas } from '../components/sortcard.js';
 import React, { useState } from "react";
 
-export const CartaDia = () => {
+const CartaDia = () => {
   const [mostrarSequencia, setMostrarSequencia] = useState(false);
   const [cartaSelecionada, setCartaSelecionada] = useState(null);
 
@@ -58,7 +58,7 @@ export const CartaDia = () => {
   );
 };
 
-
+export default CartaDia;
 
 
 

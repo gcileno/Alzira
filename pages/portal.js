@@ -61,7 +61,7 @@ export default function Portal() {
                 <div className="columns is-multiline">
                     <div className="column is-one-third">
                         <div className="box has-text-centered" style={{ background: '#e0d6cb' }}>
-                            <a onClick={() => showService('tarotDia')}>
+                            <a href='/dia/cartasdia'>
                                 <h2 className="subtitle" style={{ color: '#333' }}>Tarot do Dia</h2>
                             </a>
                         </div>
@@ -69,7 +69,7 @@ export default function Portal() {
 
                     <div className="column is-one-third">
                         <div className="box has-text-centered" style={{ background: '#e0d6cb' }}>
-                            <a onClick={() => showService('consultaTripla')}>
+                            <a href='/consultas/tiragem'>
                                 <h2 className="subtitle" style={{ color: '#333' }}>Consulta Tripla</h2>
                             </a>
                             {/* Conteúdo relacionado à "Consulta Tripla" */}

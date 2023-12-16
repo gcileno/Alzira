@@ -2,7 +2,7 @@ import 'bulma/css/bulma.min.css';
 import { SortearCartas } from '../components/sortcard.js';
 import React, { useState } from 'react';
 
-export const Tiragem = () => {
+const Tiragem = () => {
     const [mostrarSequencia, setMostrarSequencia] = useState(false);
     const [cartaSelecionada, setCartaSelecionada] = useState(null);
 
@@ -45,7 +45,7 @@ export const Tiragem = () => {
     );
 };
 
-
+export default Tiragem;
 
 const arcanosMaiores = [
     "O Louco",
