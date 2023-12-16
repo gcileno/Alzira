@@ -27,13 +27,13 @@ export default function Portal() {
                     </div>
                     <div className="navbar-end">
                         <div className="navbar-item">
-                            <a className="button is-light" onClick={() => showService('tarotDia')}>
+                            <a className="button is-light">
                                 <FontAwesomeIcon icon={faList} style={{ marginRight: '5px' }} />
                                 Tirada dia
                             </a>
                         </div>
                         <div className="navbar-item">
-                            <a className="button is-light" onClick={() => showService('consultaTripla')}>
+                            <a className="button is-light">
                                 <FontAwesomeIcon icon={faCheckCircle} style={{ marginRight: '5px' }} />
                                 Consulta Tripla
                             </a>
@@ -86,12 +86,6 @@ export default function Portal() {
                 </div>
             </section>
 
-            <section className="section">
-                {/* Conteúdo da terceira seção (alterar conforme o serviço selecionado) */}
-                {currentService === 'tarotDia' && <CartaDia />}
-                {currentService === 'consultaTripla' && <Tiragem />}
-                {/* Adicione mais condições conforme necessário para outros serviços */}
-            </section>
         </div>
     );
 }

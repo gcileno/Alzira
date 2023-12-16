@@ -1,5 +1,8 @@
 import 'bulma/css/bulma.min.css';
 
+import React from 'react';
+
+
 export function SortearCartas({ onCartaClick, cartaSelecionada }) {
   const cartas = Array.from({ length: 5 }, (_, index) => {
     
