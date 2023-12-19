@@ -21,15 +21,10 @@ const db = mysql({
 async function query(q) {
 
   try {
-
     const results = await db.query(q)
-
     await db.end()
-
     return results
-
   } catch (e) {
-
     throw Error(e.message)
 
   }
@@ -89,9 +84,8 @@ async function createTables() {
   }
 }
 
-async function NewUser() {
 
-}
+
 
 async function migrate() {
 
