@@ -36,7 +36,7 @@ export default function Login() {
                 <div className="field">
                     <div className="control">
                         <button type="submit" className="button is-dark is-fullwidth">
-                            Entrar
+                            <a href="/portal">Entrar</a>
                         </button>
                     </div>
                 </div>
