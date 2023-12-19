@@ -26,7 +26,7 @@ export default function Portal() {
                     </div>
                     <div className="navbar-end">
                         <div className="navbar-item">
-                            <a className="button is-light">
+                            <a className="button is-light" href="/favorites">
                                 <FontAwesomeIcon icon={faList} style={{ marginRight: '5px' }} />
                                 Cartas Favoritas
                             </a>
